@@ -1,11 +1,10 @@
 PROGRAM = interface-elem
-CXX     = /opt/local/bin/g++
+CXX     = g++
 
 LIBS= -lboost_regex-mt -lfreetype 
-LIBDIRS = -L/opt/local/lib/ \
+LIBDIRS = 
 
-INCLUDEDIRS = \
-          -I/opt/local/include \
+INCLUDEDIRS = 
 
 CFLAGS = -O0 -g -Wall -std=c++0x $(INCLUDEDIRS)
 LFLAGS = $(LIBS) $(LIBDIRS)

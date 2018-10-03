@@ -78,22 +78,22 @@ void                     readAbaqusMesh
   elemNode = boost::lexical_cast<int> (line[found + 8]);
   if (elemNode == 3)
   {
-	  elemType = 2
+	  elemType = 2;
   }
   else if (elemNode == 4)
   {
-	  elemType = 3
+	  elemType = 3;
   }
   else if (elemNode == 8)
   {
-	  elemType = 5
+	  elemType = 5;
   }
   else
   {
 	  cerr << "element type is not supported!\n";
 	  exit(1);
   }
-  matId = 1
+  matId = 1;
 
   getline(file, line);
   const int elemCount = boost::lexical_cast<int> (line);
@@ -208,7 +208,7 @@ void                     readAbaqusMesh
   
     cout << "Building initial faces of 3D elements...\n\n"; 
 
-    for ( int ie = 0; ie < globdat.elemSet.size (); ie++ )
+    for ( unsigned int ie = 0; ie < globdat.elemSet.size (); ie++ )
     {
       globdat.elemSet[ie]->buildFaces0 ();
     }
